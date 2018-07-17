@@ -3,6 +3,10 @@ class User < ApplicationRecord
   validates_presence_of :last_name
   validates :email, uniqueness: true, presence: true
   validates_presence_of :password, require: true
+  validates_presence_of :role
 
   has_secure_password
+
+  has_many :favorites
+  has_many :gifs, through: :favorites
 end
