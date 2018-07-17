@@ -7,8 +7,6 @@ describe 'login workflow' do
     visit root_path
     click_on "I already have an account"
     expect(current_path).to eq(login_path)
-    fill_in :first_name, with: user.first_name
-    fill_in :last_name, with: user.last_name
     fill_in :email, with: user.email
     fill_in :password, with: user.password
 
@@ -26,8 +24,6 @@ describe 'login workflow' do
     click_on "I already have an account"
     expect(current_path).to eq(login_path)
 
-    fill_in :first_name, with: user.first_name
-    fill_in :last_name, with: user.last_name
     fill_in :email, with: user.email
     fill_in :password, with: user.password
 
