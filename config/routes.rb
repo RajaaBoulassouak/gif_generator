@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
 
   resources :users, only: [:new, :create, :show]
+
+  namespace :admin do
+    resources :categories, only: [:new, :create]
+  end
 end
