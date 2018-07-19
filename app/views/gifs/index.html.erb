@@ -11,10 +11,13 @@
     </ul>
   </div>
 </nav>
-<h1>Gifs</h1>
-<% if current_admin? %>
-  <%= link_to 'Add New Gif', new_admin_gif_path %>
-<% end %>
+
+<div class="jumbotron text-center">
+  <h1 class="display-4">Gifs</h1>
+  <hr class="my-4">
+  <% if current_admin? %>
+    <%= link_to 'Add New Gif', new_admin_gif_path %>
+  <% end %>
 
 <% @gifs.each do |gif| %>
   <%= link_to image_tag(gif.image_url), gif_path(gif)%>
@@ -29,3 +32,4 @@
       <% end %>
     <% end %>
 <% end %>
+</div>
