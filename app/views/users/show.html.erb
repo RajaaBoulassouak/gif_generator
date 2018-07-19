@@ -13,8 +13,9 @@
 </nav>
 
 <h1>Welcome, <%= current_user.first_name %>!</h1>
-<h1>Favorites</h1>
+<h1><%= pluralize( @favorites.count, "Favorite") %></h1>
 
 <% @favorites.each do |favorite| %>
-  <img src="<%= favorite.image_url %>">
+   <%= image_tag favorite.gif.image_url %>
+   <%= button_to 'Unfavorite', user_favorite_path(current_user, favorite), method: :delete %>
 <% end %>
