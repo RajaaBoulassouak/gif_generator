@@ -8,6 +8,12 @@ Rails.application.routes.draw do
     resources :favorites, only: [:index]
   end
 
+  resources :categories, only: [:index, :show] do
+    resources :gifs, only: [:index, :show]
+  end
+
+  resources :gifs, only: [:index]
+
   namespace :admin do
     resources :categories, only: [:new, :create]
   end

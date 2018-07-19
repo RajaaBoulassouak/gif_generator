@@ -6,6 +6,7 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def create
+    #creating category and gif 
   end
 
   private
