@@ -14,8 +14,6 @@ class FavoritesController < ApplicationController
     @favorite = Favorite.find(params[:id])
     @favorite.destroy
     redirect_to user_path(params[:user_id])
-    # destory the favorite
-    # redirect to user_show
   end
 
   private

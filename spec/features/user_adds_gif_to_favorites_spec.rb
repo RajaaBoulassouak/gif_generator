@@ -12,7 +12,7 @@ describe 'user adds a gif to their favorites page' do
 
       click_button "Add To Favorites"
 
-      expect(current_path).to eq(user_favorites_path(user))
+      expect(current_path).to eq(user_path(user))
     end
   end
 end
