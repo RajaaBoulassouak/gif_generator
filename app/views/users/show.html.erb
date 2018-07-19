@@ -1,2 +1,9 @@
 <h1>Welcome, <%= current_user.first_name %>!</h1>
+<h1>Favorites</h1>
+
+<% @favorites.each do |favorite| %>
+  <img src="<%= favorite.image_url %>">
+<% end %>
+
+<%= link_to "Browse Gif's", gifs_path %>
 <%= link_to "Log Out", logout_path %>
