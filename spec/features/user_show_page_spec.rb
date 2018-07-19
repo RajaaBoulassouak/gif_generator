@@ -23,7 +23,7 @@ describe 'user show page' do
     expect(current_path).to eq(gifs_path)
 
     expect(page).to have_content("Gif's")
-    # expect(page).to have_content(gif_1.category.name)
+    # expect(page).to have_content(gif_1.image_url)
     # expect(page).to have_content(gif_2.category.name)
   end
   it "displays a list of all the gifs they've favorited" do

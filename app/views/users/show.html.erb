@@ -1,9 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <%= link_to "Browse", gifs_path, class: "navbar-brand"  %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <%= link_to "Log Out", logout_path, class: "nav-link" %>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 <h1>Welcome, <%= current_user.first_name %>!</h1>
 <h1>Favorites</h1>
 
 <% @favorites.each do |favorite| %>
   <img src="<%= favorite.image_url %>">
 <% end %>
-
-<%= link_to "Browse Gif's", gifs_path %>
-<%= link_to "Log Out", logout_path %>
