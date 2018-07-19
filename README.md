@@ -33,12 +33,12 @@ Create an app where users can "favorite" gifs. Host your app live on Heroku.
 
 #### User Experience
 
-- [ ] The application has been styled.
-- [ ] The application uses a balanced, considered color scheme.
-- [ ] The application implements a font (that is not the default font).
+- [X] The application has been styled.
+- [X] The application uses a balanced, considered color scheme.
+- [X] The application implements a font (that is not the default font).
 - [x] The application utilizes a nav bar.
-- [ ] The style shows evidence of intentional layout.
-- [ ] Space and text is balanced. White space is used to visually separate content.
+- [X] The style shows evidence of intentional layout.
+- [X] Space and text is balanced. White space is used to visually separate content.
 - [x] The application is easily usable. The user can intuitvely navigate between different portions of the application without manually entering the URL into the nav-bar or using the back button on their browser.
 
 #### Database

@@ -12,10 +12,13 @@
   </div>
 </nav>
 
-<h1>Welcome, <%= current_user.first_name %>!</h1>
-<h1><%= pluralize( @favorites.count, "Favorite") %></h1>
+<div class="jumbotron text-center">
+  <h1 class="display-4">Welcome, <%= current_user.first_name %>!</h1>
+  <p class="lead"><%= pluralize( @favorites.count, "Favorite") %></p>
+  <hr class="my-4">
 
 <% @favorites.each do |favorite| %>
-   <%= image_tag favorite.gif.image_url %>
+   <%= image_tag favorite.gif.image_url, class: "img-thumbnail" %>
    <%= button_to 'Unfavorite', user_favorite_path(current_user, favorite), method: :delete %>
 <% end %>
+</div>
