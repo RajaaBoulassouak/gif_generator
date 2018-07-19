@@ -1,4 +1,4 @@
-class Admin::CategoriesController < ApplicationController
+class Admin::CategoriesController < Admin::BaseController
   before_action :require_admin
 
   def new
@@ -6,7 +6,7 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def create
-    #creating category and gif 
+    #creating category and gif
   end
 
   private
